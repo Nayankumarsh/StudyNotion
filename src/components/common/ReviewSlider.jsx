@@ -41,8 +41,8 @@ function ReviewSlider() {
   // console.log(reviews)
 
   return (
-    <div className="text-white">
-      <div className="my-[50px] h-[184px] max-w-maxContentTab lg:max-w-maxContent">
+    <div className="text-white w-full flex justify-center ">
+      <div className="my-[50px] h-[184px]  min-w-[300px] lg:max-w-maxContentTab flex self-center">
         <Swiper
           slidesPerView={3}
           spaceBetween={25}
@@ -58,12 +58,12 @@ function ReviewSlider() {
               slidesPerView : 4,
             },
           }}
-          className="w-full "
+          className="min-w-[200%]  "
         >
           {reviews.map((review, i) => {
             return (
-              <SwiperSlide key={i}>
-                <div className="flex flex-col gap-3 bg-richblack-800 p-3 text-[14px] text-richblack-25">
+              <SwiperSlide key={i} className="flex justify-center">
+                <div className="flex flex-col gap-3 bg-richblack-800 p-3 text-[14px] text-richblack-25 w-full">
                   <div className="flex items-center gap-4">
                     <img
                       src={
